@@ -17,8 +17,8 @@ def receiver():
     expected_frame_no = [frame['Frame_No'] for frame in frames]
 
     # Simulate an error by randomly changing the frame number
-    if random.random() < 0.2:  # 20% chance to introduce an error
-        expected_frame_no[random.randint(0, len(expected_frame_no) - 1)] = -1
+    #if random.random() < 0.2:  # 20% chance to introduce an error
+        #expected_frame_no[random.randint(0, len(expected_frame_no) - 1)] = -1
 
     if all(frame['Frame_No'] == expected_frame_no[i] for i, frame in enumerate(frames)):
         print("Frames received correctly, sending ACKs")
